@@ -117,20 +117,20 @@ def main():
     print("=" * 70)
     
     # Fix ND100
-    print("\n📄 Xử lý ND100.txt...")
-    fix_file("ND100.txt")
+    print("\n📄 Xử lý ND100_02.txt...")
+    fix_file("../../data/raw/ND100_02.txt")
     
-    # Fix ND123
-    print("\n📄 Xử lý ND123.txt...")
-    fix_file("ND123.txt")
+    # # Fix ND123
+    # print("\n📄 Xử lý ND123.txt...")
+    # fix_file("ND123.txt")
     
-    # Fix ND168
-    print("\n📄 Xử lý ND168.txt...")
-    fix_file("ND168.txt")
+    # # Fix ND168
+    # print("\n📄 Xử lý ND168.txt...")
+    # fix_file("ND168.txt")
     
-    print("\n" + "=" * 70)
-    print("✅ Hoàn thành!")
-    print("=" * 70)
+    # print("\n" + "=" * 70)
+    # print("✅ Hoàn thành!")
+    # print("=" * 70)
 
 if __name__ == "__main__":
     main()

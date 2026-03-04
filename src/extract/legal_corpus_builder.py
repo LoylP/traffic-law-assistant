@@ -28,10 +28,14 @@ from typing import Dict, List, Optional, Tuple
 # =========================
 # CONFIG
 # =========================
+# Each decree can have multiple files (e.g., ND100 split into ND100.txt and ND100_02.txt)
+# Format: (decree_id, [list_of_files])
+DATA_DIR = Path(__file__).parent.parent.parent / "data" / "raw"
+
 INPUTS = [
-    ("100", "ND100.txt"),
-    ("123", "ND123.txt"),
-    ("168", "ND168.txt"),
+    ("100", [str(DATA_DIR / "ND100.txt"), str(DATA_DIR / "ND100_02.txt")]),  # ND100 split into 2 files
+    ("123", [str(DATA_DIR / "ND123.txt")]),
+    ("168", [str(DATA_DIR / "ND168.txt")]),
 ]
 
 OUT_DIR = Path("cleaned_txt")
@@ -186,6 +190,20 @@ def roman_to_int(roman: str) -> Optional[int]:
             prev = v
     return total
 
+def load_multiple_files(file_list: List[str]) -> str:
+    """
+    Load multiple files, normalize, and merge their content.
+    Used when a single decree is split across multiple files (e.g., ND100.txt + ND100_02.txt).
+    """
+    contents = []
+    for fname in file_list:
+        p = Path(fname)
+        content = p.read_text(encoding="utf-8", errors="ignore")
+        contents.append(content)
+    
+    merged = "\n".join(contents)
+    return normalize(merged)
+
 def detect_doc_meta(raw: str, decree_id: str) -> Dict[str, Optional[str]]:
     meta: Dict[str, Optional[str]] = {
         "decree_no": None,
@@ -284,14 +302,15 @@ def _parse_multi_points(s: str) -> List[str]:
             out.append(tok)
     return sorted(set(out))
 
-def extract_amendments(amending_decree_id: str, amending_path: Path) -> Dict[str, List[dict]]:
+def extract_amendments(amending_decree_id: str, amending_files: List[str]) -> Dict[str, List[dict]]:
     """
     Returns amendment_map:
       key = target_citation_id like "ND100_2019-D28-K6-Pd"
       value = list[AmendRec as dict]
+    
+    amending_files: list of file paths to load and merge
     """
-    raw0 = amending_path.read_text(encoding="utf-8", errors="ignore")
-    raw0 = normalize(raw0)
+    raw0 = load_multiple_files(amending_files)
     meta = detect_doc_meta(raw0, amending_decree_id)
 
     pages = split_pages(raw0)
@@ -515,13 +534,13 @@ def merge_amendment_maps(*maps: Dict[str, List[dict]]) -> Dict[str, List[dict]]:
 # =========================
 # Main parsing: Chapter -> Article -> Clause -> Point
 # =========================
-def parse_one(decree_id: str, path_txt: str, amend_map: Dict[str, List[dict]]) -> List[dict]:
-    p = Path(path_txt)
-    raw0 = p.read_text(encoding="utf-8", errors="ignore")
-    raw0 = normalize(raw0)
-
+def parse_one(decree_id: str, file_list: List[str], amend_map: Dict[str, List[dict]]) -> List[dict]:
+    raw0 = load_multiple_files(file_list)
     meta = detect_doc_meta(raw0, decree_id)
     base = decree_base_id(meta.get("decree_no"), decree_id)
+    
+    # Create source string from file_list (for attribution)
+    source_str = "; ".join([Path(f).name for f in file_list])
     
     # Determine document status: original or amended
     # For ND100: original (no amender found in primary content)
@@ -612,7 +631,7 @@ def parse_one(decree_id: str, path_txt: str, amend_map: Dict[str, List[dict]]) -
                 "clause": None,
                 "point": None,
                 "text": a_block,
-                "source": str(p),
+                "source": source_str,
                 "page_start": page_start,
                 "page_end": page_end,
                 "amended_by": amended_by,
@@ -643,7 +662,7 @@ def parse_one(decree_id: str, path_txt: str, amend_map: Dict[str, List[dict]]) -
                     "clause": clause_no,
                     "point": None,
                     "text": f"Điều {article_no}\n{clause_text}",
-                    "source": str(p),
+                    "source": source_str,
                     "page_start": page_start,
                     "page_end": page_end,
                     "amended_by": amended_by,
@@ -677,7 +696,7 @@ def parse_one(decree_id: str, path_txt: str, amend_map: Dict[str, List[dict]]) -
                         "clause": clause_no,
                         "point": point,
                         "text": f"Điều {article_no}\n{point_text}",
-                        "source": str(p),
+                        "source": source_str,
                         "page_start": page_start,
                         "page_end": page_end,
                         "amended_by": amended_by,
@@ -691,13 +710,13 @@ def parse_one(decree_id: str, path_txt: str, amend_map: Dict[str, List[dict]]) -
 def main():
     # 1) Extract amendment maps from all decrees (any decree can be an amender)
     amend_maps: List[Dict[str, List[dict]]] = []
-    for did, f in INPUTS:
+    for did, files in INPUTS:
         try:
-            mp = extract_amendments(did, Path(f))
+            mp = extract_amendments(did, files)
             if mp:
                 amend_maps.append(mp)
-        except FileNotFoundError:
-            print(f"[WARN] missing file: {f}")
+        except FileNotFoundError as e:
+            print(f"[WARN] missing file(s) for decree {did}: {e}")
 
     amend_map = merge_amendment_maps(*amend_maps)
 
@@ -710,12 +729,12 @@ def main():
 
     # 2) Build corpus for all decrees and attach amended_by from amend_map
     all_chunks: List[dict] = []
-    for did, f in INPUTS:
-        print("Parsing", did, f)
+    for did, files in INPUTS:
+        print("Parsing", did, "from", files)
         try:
-            all_chunks.extend(parse_one(did, f, amend_map))
-        except FileNotFoundError:
-            print(f"[WARN] skip missing: {f}")
+            all_chunks.extend(parse_one(did, files, amend_map))
+        except FileNotFoundError as e:
+            print(f"[WARN] skip missing file(s) for decree {did}: {e}")
 
     # 3) Write outputs
     with OUT_JSONL.open("w", encoding="utf-8") as w:

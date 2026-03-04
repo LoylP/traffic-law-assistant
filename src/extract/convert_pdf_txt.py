@@ -5,8 +5,8 @@ import pytesseract
 import cv2
 import numpy as np
 
-PDF_PATH = "../../data/raw/168-nd-cp.signed.pdf"
-OUT_TXT = "ND168.txt"
+PDF_PATH = "../../data/raw/100.signed_02.pdf"
+OUT_TXT = "ND100_02.txt"
 
 # Nếu Windows và pytesseract không tìm thấy tesseract.exe thì bật dòng này và sửa path:
 # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
