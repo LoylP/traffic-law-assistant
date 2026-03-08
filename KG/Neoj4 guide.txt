@@ -8,4 +8,4 @@ https://neo4j.com/download/
 	Version: 2026.01.4
 	Start the database
 
-Default connection: bolt://localhost:7687
+Run load_graph.py to import law_corpus to neo4j
