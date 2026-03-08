@@ -1,0 +1,11 @@
+pip install neo4j=6.1.0
+
+https://neo4j.com/download/
+	Install Neo4j Desktop
+	Create a Local DBMS
+	Set username/password
+		(neo4j / password)
+	Version: 2026.01.4
+	Start the database
+
+Default connection: bolt://localhost:7687
