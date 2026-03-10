@@ -7,6 +7,8 @@ from pathlib import Path
 
 from fastapi import Body, FastAPI, HTTPException, Query
 from fastapi.responses import HTMLResponse, JSONResponse
+from opensearchpy.exceptions import ConnectionError as OpenSearchConnectionError
+from opensearchpy.exceptions import ConnectionTimeout as OpenSearchConnectionTimeout
 from pydantic import BaseModel
 
 from src.search.ingest import load_knowledge
@@ -47,6 +49,11 @@ def api_search(q: str = Query(..., min_length=1, description="Search query")) ->
     try:
         results = search(q)
         return JSONResponse(content={"query": q, "results": results})
+    except (OpenSearchConnectionTimeout, OpenSearchConnectionError) as e:
+        raise HTTPException(
+            status_code=503,
+            detail=f"OpenSearch unreachable or timeout: {e}. Increase OPENSEARCH_TIMEOUT (seconds) in .env if the cluster is slow.",
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

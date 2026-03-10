@@ -6552,18 +6552,6 @@
     "violation_id": "V546"
   },
   {
-    "description_natural": ".",
-    "normalized_violation": ".",
-    "vehicle_type": "ô tô",
-    "context_condition": "",
-    "fine_min": 2000000,
-    "fine_max": 3000000,
-    "additional_sanctions": "",
-    "legal_basis": "corpus://dataset-traffic-law#dieu-21-khoan-4-diem-c | NĐ 168/2024/NĐ-CP, Điều 21 Khoản 4 Điểm c",
-    "confidence_label": "medium",
-    "violation_id": "V547"
-  },
-  {
     "description_natural": "Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với hành vi vận chuyến hàng hoá nguy hiểm mà không mang theo hồ sơ vận chuyển hàng hóa nguy hiểm do người thuê vận tải cung cấp theo quy định, giấy chứng nhận hoàn thành chương trình tập huấn an toàn hàng hóa nguy hiểm phù hợp với loại, nhóm hàng hóa nguy hiểm đang vận chuyển (nếu có).",
     "normalized_violation": "Phạt tiền từ 2.000.000 đồng đến 3.000.000 đồng đối với hành vi vận chuyến hàng hoá nguy hiểm mà không mang theo hồ sơ vận chuyển hàng hóa nguy hiểm do người thuê vận tải cung cấ...",
     "vehicle_type": "ô tô",
@@ -6646,18 +6634,6 @@
     "legal_basis": "corpus://dataset-traffic-law#dieu-33-khoan-3 | NĐ 168/2024/NĐ-CP, Điều 33 Khoản 3",
     "confidence_label": "medium",
     "violation_id": "V554"
-  },
-  {
-    "description_natural": ".",
-    "normalized_violation": ".",
-    "vehicle_type": "khác",
-    "context_condition": "",
-    "fine_min": 2000000,
-    "fine_max": 4000000,
-    "additional_sanctions": "",
-    "legal_basis": "corpus://dataset-traffic-law#dieu-37-khoan-2-diem-p | NĐ 168/2024/NĐ-CP, Điều 37 Khoản 2 Điểm p",
-    "confidence_label": "medium",
-    "violation_id": "V555"
   },
   {
     "description_natural": "Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với cá nhân, từ 6.000.000 đồng đến 10.000.000 đồng đối với tổ chức thực hiện hành vi bày, bán máy móc, thiết bị, vật tư hoặc sản xuất, gia công hàng hóa trên lòng đường, via hè.",
@@ -6934,18 +6910,6 @@
     "legal_basis": "corpus://dataset-traffic-law#dieu-28-khoan-3 | NĐ 168/2024/NĐ-CP, Điều 28 Khoản 3",
     "confidence_label": "medium",
     "violation_id": "V578"
-  },
-  {
-    "description_natural": ".",
-    "normalized_violation": ".",
-    "vehicle_type": "khác",
-    "context_condition": "",
-    "fine_min": 8000000,
-    "fine_max": 10000000,
-    "additional_sanctions": "",
-    "legal_basis": "corpus://dataset-traffic-law#dieu-32-khoan-10-diem-g | NĐ 168/2024/NĐ-CP, Điều 32 Khoản 10 Điểm g",
-    "confidence_label": "medium",
-    "violation_id": "V579"
   },
   {
     "description_natural": "Đưa ra các yêu cầu trái quy định về trình tự, thủ tục đăng kiểm đối với cá nhân, tổ chức.",

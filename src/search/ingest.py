@@ -8,14 +8,30 @@ Load knowledge into the vector DB (OpenSearch + document store).
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import Any, Iterator
+
+from langchain_openai import ChatOpenAI
 
 from src.config import get_settings
 from src.search.document_store import ensure_document_table, save_document_id
 from src.search.embeddings import get_embeddings
 from src.search.opensearch_client import ensure_index, get_opensearch_client, index_document
+
+
+def _get_llm() -> ChatOpenAI:
+    """Build ChatOpenAI LLM from settings (for contexted text generation)."""
+    s = get_settings()
+    kwargs: dict = {
+        "model": s.model,
+        "openai_api_key": s.api_key,
+        "temperature": s.temperature,
+    }
+    if s.base_url:
+        kwargs["openai_api_base"] = s.base_url
+    return ChatOpenAI(**kwargs)
 
 
 def _doc_for_index(
@@ -52,6 +68,93 @@ def ingest_violations_file(
     return ingest_violations(items, index_name=index_name)
 
 
+def _input_hash(doc: dict) -> str:
+    """Deterministic hash of the doc fields used for contexted text (for cache key)."""
+    canonical = {
+        "description_natural": (doc.get("description_natural") or "").strip(),
+        "vehicle_type": (doc.get("vehicle_type") or "").strip(),
+        "context_condition": (doc.get("context_condition") or "").strip(),
+    }
+    payload = json.dumps(canonical, sort_keys=True, ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def _contexted_text(doc: dict) -> str:
+    """Generate search-optimized contexted text for a violation document using an LLM.
+
+    Results are cached in a JSON file (see config contexted_text_cache) with key = input hash.
+
+    Example output: "không chấp hành tín hiệu đèn giao thông: Vượt đèn đỏ, đèn vàng, ..."
+
+    Args:
+        doc: Document with description_natural, vehicle_type, context_condition.
+
+    Returns:
+        Contexted text for embedding/search, or a concatenation of fields on LLM failure.
+    """
+    fallback = " ".join(
+        filter(
+            None,
+            [
+                (doc.get("description_natural") or "").strip(),
+                (doc.get("vehicle_type") or "").strip(),
+                (doc.get("context_condition") or "").strip(),
+            ],
+        )
+    ).strip() or "(no text)"
+
+    cache_path = Path(get_settings().contexted_text_cache)
+    key = _input_hash(doc)
+
+    # Load cache: JSON object with key = input hash, value = contexted text
+    cache: dict[str, str] = {}
+    if cache_path.exists():
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                cache = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            pass
+    if key in cache and (cache[key] or "").strip():
+        print(f"Cached contexted text for {key}")
+        print(cache[key])
+        print("--------------------------------")
+        return (cache[key] or "").strip()
+
+    try:
+        llm = _get_llm()
+        user_content = (
+            "Generate a single contexted text for search from this violation document. "
+            "Include both the formal description and natural, everyday keywords that people "
+            "use when searching or talking about this (e.g. colloquial terms, common phrases). "
+            "Return only the contexted text, no explanation.\n\n"
+            f"description_natural: {doc.get('description_natural') or ''}\n"
+            f"vehicle_type: {doc.get('vehicle_type') or ''}\n"
+            f"context_condition: {doc.get('context_condition') or ''}"
+        )
+        messages = [
+            (
+                "system",
+                "You generate search-optimized contexted text for traffic violation documents. "
+                "Use everyday language: include natural keywords and phrases that people use in "
+                "daily life when describing or searching for this violation (e.g. vượt đèn đỏ, "
+                "chạy quá tốc độ, đi sai làn, không đội mũ, đỗ xe sai chỗ). Blend formal legal "
+                "wording with colloquial terms so search matches how users actually ask. "
+                "Output only the contexted text, nothing else.",
+            ),
+            ("human", user_content),
+        ]
+        response = llm.invoke(messages)
+        text = (response.content or "").strip() + " " + (doc.get("description_natural") or "")
+        text = text.strip() if text else fallback
+        cache[key] = text
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+        return text
+    except Exception:
+        return fallback
+
+
 def ingest_violations(
     documents: list[dict],
     *,
@@ -69,8 +172,11 @@ def ingest_violations(
     embeddings = get_embeddings()
     count = 0
     for i, doc in enumerate(documents):
-        text = (doc.get("description_natural") or "").strip() or "(no text)"
+        
+        text = _contexted_text(doc)
         vec = embeddings.embed_query(text)
+        # Persist the exact text used to generate the vector embedding.
+        doc["vector_embedding_text"] = text
         doc_id = doc.get("violation_id") or f"V{i+1:03d}"
         opensearch_id = index_document(
             doc=doc,
@@ -122,6 +228,7 @@ def ingest_jsonl(
         doc, doc_id = _doc_for_index(raw, text_field, id_field)
         text = doc["description_natural"]
         vec = embeddings.embed_query(text)
+        doc["vector_embedding_text"] = text
         os_id = doc_id or f"doc_{i}"
         opensearch_id = index_document(
             doc=doc,

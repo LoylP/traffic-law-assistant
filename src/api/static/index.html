@@ -138,6 +138,41 @@
       font-size: 0.85rem;
       color: var(--fine);
     }
+    .result-actions {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .result-actions button {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.8rem;
+      font-family: inherit;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .result-actions button:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .result-full-doc {
+      margin-top: 0.75rem;
+      padding: 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 20rem;
+      overflow: auto;
+    }
     .empty, .hint {
       text-align: center;
       color: var(--text-muted);
@@ -185,9 +220,11 @@
       btnEl.disabled = loading;
       btnEl.textContent = loading ? 'Đang tìm...' : 'Tìm kiếm';
     }
+    let lastResults = [];
     function renderResults(data) {
       hintEl.style.display = 'none';
       const list = data.results || [];
+      lastResults = list;
       if (list.length === 0) {
         resultsEl.innerHTML = '<p class="empty">Không có kết quả.</p>';
         return;
@@ -201,7 +238,7 @@
           : '–';
         const legal = (r.legal_basis || '').trim();
         return `
-          <article class="result-card">
+          <article class="result-card" data-result-index="${i}">
             <div class="result-header">
               <span class="result-id">${escapeHtml(r.violation_id || r._id || `#${i + 1}`)}</span>
               <span class="result-score">score ${score}</span>
@@ -212,9 +249,34 @@
               <span>Phạt: ${escapeHtml(fine)}</span>
             </div>
             ${legal ? `<div class="result-legal">${escapeHtml(legal)}</div>` : ''}
+            <div class="result-actions">
+              <button type="button" class="btn-full-doc" data-index="${i}">Xem đầy đủ (vector DB doc)</button>
+            </div>
+            <div class="result-full-doc" id="full-doc-${i}" style="display: none;" aria-hidden="true"></div>
           </article>
         `;
       }).join('');
+      resultsEl.querySelectorAll('.btn-full-doc').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const index = parseInt(this.getAttribute('data-index'), 10);
+          const doc = lastResults[index];
+          const fullDocEl = document.getElementById('full-doc-' + index);
+          if (!doc || !fullDocEl) return;
+          const isHidden = fullDocEl.style.display === 'none';
+          if (isHidden) {
+            const copy = { ...doc };
+            delete copy.embedding;
+            fullDocEl.textContent = JSON.stringify(copy, null, 2);
+            fullDocEl.style.display = 'block';
+            fullDocEl.setAttribute('aria-hidden', 'false');
+            this.textContent = 'Ẩn đầy đủ';
+          } else {
+            fullDocEl.style.display = 'none';
+            fullDocEl.setAttribute('aria-hidden', 'true');
+            this.textContent = 'Xem đầy đủ (vector DB doc)';
+          }
+        });
+      });
     }
     function escapeHtml(s) {
       const div = document.createElement('div');

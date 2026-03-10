@@ -6,7 +6,7 @@ from __future__ import annotations
 from functools import lru_cache
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
-
+import os
 
 class Settings(BaseSettings):
     """Application settings loaded from .env."""
@@ -30,16 +30,27 @@ class Settings(BaseSettings):
     opensearch_username: str = Field(alias="OPENSEARCH_USERNAME", default="")
     opensearch_password: str = Field(alias="OPENSEARCH_PASSWORD", default="")
     opensearch_ssl_verify: bool = Field(alias="OPENSEARCH_SSL_VERIFY", default=True)
+    # OpenSearch request/read timeout in seconds (default 10; increase if remote cluster is slow)
+    opensearch_timeout: int = Field(alias="OPENSEARCH_TIMEOUT", default=30)
 
-    # Search (doc says index name "traffic_law_index" and top k: 5)
+    # Search: window = k-NN candidates before rerank; top_k = final results after rerank
     traffic_law_index: str = Field(alias="TRAFFIC_LAW_INDEX", default="traffic_law_index")
-    top_k: int = Field(alias="TOP_K", default=5)
+    search_window_size: int = Field(alias="SEARCH_WINDOW_SIZE", default=50)
+    top_k: int = Field(alias="TOP_K", default=15)
     reranker_model: str = Field(
         alias="RERANKER_MODEL",
         default="cross-encoder/ms-marco-MiniLM-L-6-v2",
     )
-    # OpenSearch search pipeline for native rerank (optional; if set, no Python rerank)
-    search_pipeline: str = Field(alias="SEARCH_PIPELINE", default="")
+    hf_token: str = Field(alias="HF_TOKEN", default="")
+    # OpenSearch search pipeline for native rerank (created automatically if model available; set empty to disable)
+    search_pipeline: str = Field(alias="SEARCH_PIPELINE", default="rerank_pipeline")
+    # OpenSearch ML model ID for rerank (optional; if set, use it; else auto-load via getLLMModel-style search/register/deploy)
+    opensearch_rerank_model_id: str = Field(alias="OPENSEARCH_RERANK_MODEL_ID", default="")
+    # OpenSearch ML model name for auto-load (search/register); same as Go when not set
+    opensearch_rerank_model_name: str = Field(
+        alias="OPENSEARCH_RERANK_MODEL_NAME",
+        default="huggingface/cross-encoders/ms-marco-MiniLM-L-6-v2",
+    )
 
     # SQLite document table (for storing OpenSearch doc ids)
     sqlite_document_db: str = Field(
@@ -47,7 +58,20 @@ class Settings(BaseSettings):
         default="data/document_ids.db",
     )
 
+    # Contexted-text cache: JSON file with key = input hash, value = contexted text
+    contexted_text_cache: str = Field(
+        alias="CONTEXTED_TEXT_CACHE",
+        default="data/contexted_text_cache.json",
+    )
+
 
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+
+# Export HF token for Hugging Face Hub (model downloads, higher rate limits).
+# Both names are used by different HF libraries.
+_token = get_settings().hf_token
+if _token:
+    os.environ["HF_TOKEN"] = _token
+    os.environ["HUGGING_FACE_HUB_TOKEN"] = _token
