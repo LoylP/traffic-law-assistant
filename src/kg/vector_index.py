@@ -14,11 +14,25 @@ STRUCTURED_DIR = DATA_DIR / "structured"
 KG_DIR = DATA_DIR / "kg"
 KG_DIR.mkdir(parents=True, exist_ok=True)
 
+# Cache for the embedding model (download once, reuse from disk)
+MODEL_CACHE_DIR = BASE_DIR / "data" / "models"
+MODEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
 VIOLATION_FILE = STRUCTURED_DIR / "violations_300.json"
 INDEX_FILE = KG_DIR / "faiss_index.bin"
 META_FILE = KG_DIR / "faiss_meta.json"
 
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
+_model = None
+
+
+def get_model():
+    """Load the embedding model once per process; uses cache so download only happens once."""
+    global _model
+    if _model is None:
+        _model = SentenceTransformer(MODEL_NAME, cache_folder=str(MODEL_CACHE_DIR))
+    return _model
 
 
 def load_violations():
@@ -28,7 +42,7 @@ def load_violations():
 
 def build_index():
     data = load_violations()
-    model = SentenceTransformer(MODEL_NAME)
+    model = get_model()
 
     texts = []
     meta = []
@@ -82,7 +96,7 @@ def build_index():
 
 
 def search(query: str, top_k: int = 5):
-    model = SentenceTransformer(MODEL_NAME)
+    model = get_model()
     index = faiss.read_index(str(INDEX_FILE))
 
     with META_FILE.open("r", encoding="utf-8") as f:

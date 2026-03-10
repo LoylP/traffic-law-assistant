@@ -1,30 +1,29 @@
-from ..kg.vector_index import build_index, search
+from ..kg.vector_index import build_index, get_model, INDEX_FILE, META_FILE
 from ..llm.promts import ANSWER_PROMPT
 from langchain_core.prompts import ChatPromptTemplate
 import json
 from ..llm.client import get_llm_client
 from pydantic import BaseModel
-from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
-from ..kg.vector_index import MODEL_NAME, INDEX_FILE, META_FILE
+
 # Ouput parser for the LLM answer
 class LLMAnswerOutputParser(BaseModel):
     answer: str
 
 
-# TODO: LOAD FROM KG PAKEG
-SEARCH_INDEX = build_index()     
-MODEL = SentenceTransformer(MODEL_NAME)
+# Load existing index from disk (no rebuild on every run). Build only if missing.
+if not INDEX_FILE.exists():
+    build_index()
 INDEX = faiss.read_index(str(INDEX_FILE))
 
 
 def search(query: str, top_k: int = 5):
-    
+    model = get_model()
     with META_FILE.open("r", encoding="utf-8") as f:
         meta = json.load(f)
 
-    q_emb = MODEL.encode([query], normalize_embeddings=True)
+    q_emb = model.encode([query], normalize_embeddings=True)
     q_emb = np.array(q_emb, dtype="float32")
 
     scores, indices = INDEX.search(q_emb, top_k)

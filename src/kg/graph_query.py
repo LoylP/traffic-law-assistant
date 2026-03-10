@@ -8,8 +8,7 @@ from typing import Dict, List, Optional, Any
 import faiss
 import networkx as nx
 import numpy as np
-from sentence_transformers import SentenceTransformer
-
+from .vector_index import get_model
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
@@ -64,7 +63,7 @@ class TrafficLawGraphQuery:
 
     def _load_model(self):
         if self.model is None:
-            self.model = SentenceTransformer(self.model_name)
+            self.model = get_model()
 
     def _load_graph(self):
         if not self.kg_nodes_file.exists():
