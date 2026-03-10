@@ -30,12 +30,12 @@ from typing import Dict, List, Optional, Tuple
 # =========================
 # Each decree can have multiple files (e.g., ND100 split into ND100.txt and ND100_02.txt)
 # Format: (decree_id, [list_of_files])
-DATA_DIR = Path(__file__).parent.parent.parent / "data" / "raw"
+DATA_DIR = Path(__file__).parent.parent.parent / "KG" / "data" / "processed"
 
 INPUTS = [
-    ("100", [str(DATA_DIR / "ND100.txt"), str(DATA_DIR / "ND100_02.txt")]),  # ND100 split into 2 files
-    ("123", [str(DATA_DIR / "ND123.txt")]),
-    ("168", [str(DATA_DIR / "ND168.txt")]),
+    ("100", [str(DATA_DIR / "nghi_dinh_100.txt")]),
+    ("123", [str(DATA_DIR / "nghi_dinh_123.txt")]),
+    ("168", [str(DATA_DIR / "nghi_dinh_168.txt")]),
 ]
 
 OUT_DIR = Path("cleaned_txt")
