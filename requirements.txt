@@ -2,6 +2,11 @@ pymupdf
 pytesseract
 opencv-python
 numpy
+tqdm
+neo4j
+pdfplumber
+os
+re
 sentence-transformers
 faiss-cpu
 networkx

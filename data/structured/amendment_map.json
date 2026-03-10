@@ -2,9 +2,9 @@
   "ND100_2019-D2-K2-Ph": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -18,9 +18,9 @@
   "ND100_2019-D4": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "bổ sung",
       "target_decree_id": "100",
@@ -28,15 +28,15 @@
       "target_article": 4,
       "target_clause": null,
       "target_point": null,
-      "note": "bổ sung Điều 4a vào sau Điều 4 như sau:"
+      "note": "Bổ sung Điều 4a vào sau Điều 4 như sau:"
     }
   ],
   "ND100_2019-D5": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -44,12 +44,12 @@
       "target_article": 5,
       "target_clause": null,
       "target_point": null,
-      "note": "Sửa đổi, bố sung một số điểm, khoản của Điều 5 như sau:"
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 5 như sau:"
     },
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "bãi bỏ",
@@ -58,15 +58,15 @@
       "target_article": 5,
       "target_clause": null,
       "target_point": null,
-      "note": "đ) Bãi bỏ Điều 5, Điều 6, Điều 7, Điều 8, Điều 9, Điều 10, Điều 11;"
+      "note": "d) Bãi bỏ Điều 5, Điều 6, Điều 7, Điều 8, Điều 9, Điều 10, Điều 11;"
     }
   ],
   "ND100_2019-D5-K3-Pk": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -74,15 +74,47 @@
       "target_article": 5,
       "target_clause": "3",
       "target_point": "k",
-      "note": "a) sửa đổi điểm k khoản 3 Điều 5 như sau:"
+      "note": "a) Sửa đổi điểm k khoản 3 Điều 5 như sau:"
+    }
+  ],
+  "ND100_2019-D5-K4-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 5,
+      "target_clause": "4",
+      "target_point": "c",
+      "note": "b) Sửa đổi điểm c khoản 4 Điều 5 như sau:"
+    }
+  ],
+  "ND100_2019-D5-K6-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 5,
+      "target_clause": "6",
+      "target_point": "b",
+      "note": "c) Sửa đổi điểm b khoản 6 Điều 5 như sau:"
     }
   ],
   "ND100_2019-D5-K7-Pc": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "bổ sung",
       "target_decree_id": "100",
@@ -90,15 +122,15 @@
       "target_article": 5,
       "target_clause": "7",
       "target_point": "c",
-      "note": "d) bổ sung điểm d vào sau điểm c khoản 7 Điều 5 như sau:"
+      "note": "d) Bổ sung điểm d vào sau điểm c khoản 7 Điều 5 như sau:"
     }
   ],
   "ND100_2019-D6": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -112,9 +144,9 @@
   "ND100_2019-D6-K3-Pa": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -122,15 +154,15 @@
       "target_article": 6,
       "target_clause": "3",
       "target_point": "a",
-      "note": "a) sửa đổi điểm a khoản 3 Điều 6 như sau:"
+      "note": "a) Sửa đổi điểm a khoản 3 Điều 6 như sau:"
     }
   ],
   "ND100_2019-D6-K3-Pm": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "bổ sung",
       "target_decree_id": "100",
@@ -138,15 +170,63 @@
       "target_article": 6,
       "target_clause": "3",
       "target_point": "m",
-      "note": "b) bổ sung điểm n, điểm o vào sau điểm m khoản 3 Điều 6 như sau:"
+      "note": "b) Bổ sung điểm n, điểm o vào sau điểm m khoản 3 Điều 6 như sau:"
+    }
+  ],
+  "ND100_2019-D6-K5": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 6,
+      "target_clause": "5",
+      "target_point": null,
+      "note": "c) Sửa đổi khoản 5 Điều 6 như sau:"
+    }
+  ],
+  "ND100_2019-D6-K10-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 6,
+      "target_clause": "10",
+      "target_point": "c",
+      "note": "d) Sửa đổi điểm c khoản 10 Điều 6 như sau:"
+    }
+  ],
+  "ND100_2019-D7-K4-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 7,
+      "target_clause": "4",
+      "target_point": "g",
+      "note": "Sửa đổi điểm g khoản 4 Điều 7 như sau:"
     }
   ],
   "ND100_2019-D8-K4-Pd": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "bổ sung",
       "target_decree_id": "100",
@@ -154,15 +234,15 @@
       "target_article": 8,
       "target_clause": "4",
       "target_point": "d",
-      "note": "bổ sung điểm đ, điểm e vào sau điểm d khoản 4 Điều 8 như sau:"
+      "note": "Bổ sung điểm đ, điểm e vào sau điểm d khoản 4 Điều 8 như sau:"
     }
   ],
   "ND100_2019-D11-K6": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -176,9 +256,9 @@
   "ND100_2019-D15-K4a": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "bổ sung",
       "target_decree_id": "100",
@@ -186,15 +266,15 @@
       "target_article": 15,
       "target_clause": "4a",
       "target_point": null,
-      "note": "bổ sung khoản 4a vào sau khoản 4 Điều 15 như sau:"
+      "note": "Bổ sung khoản 4a vào sau khoản 4 Điều 15 như sau:"
     }
   ],
   "ND100_2019-D16": [
     {
       "amending_decree_id": "123",
-      "amending_decree_no": "123/2021/NĐ-CP",
-      "amending_issue_date": "2021-12-28",
-      "amending_effective_from": "2021-12-28",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
       "amending_article": 2,
       "action": "sửa đổi",
       "target_decree_id": "100",
@@ -206,8 +286,8 @@
     },
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "bãi bỏ",
@@ -219,11 +299,1659 @@
       "note": "e) Bãi bỏ Điều 16, Điều 17, Điều 18, Điều 19, Điều 20, Điều 21, Điều 22;"
     }
   ],
+  "ND100_2019-D17-K2-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 17,
+      "target_clause": "2",
+      "target_point": "c",
+      "note": "Bổ sung điểm d vào sau điểm c khoản 2 Điều 17 như sau:"
+    }
+  ],
+  "ND100_2019-D21": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 21,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 21 như sau:"
+    }
+  ],
+  "ND100_2019-D23": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 23,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 23 như sau:"
+    }
+  ],
+  "ND100_2019-D23-K5-Pp": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 23,
+      "target_clause": "5",
+      "target_point": "p",
+      "note": "a) Sửa đổi điểm p khoản 5 Điều 23 như sau:"
+    }
+  ],
+  "ND100_2019-D23-K6-Pđ": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 23,
+      "target_clause": "6",
+      "target_point": "đ",
+      "note": "b) Sửa đổi điểm đ khoản 6 Điều 23 như sau:"
+    }
+  ],
+  "ND100_2019-D23-K7a": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 23,
+      "target_clause": "7a",
+      "target_point": null,
+      "note": "c) Bổ sung khoản 7a vào sau khoản 7 Điều 23 như sau:"
+    }
+  ],
+  "ND100_2019-D23-K8-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 23,
+      "target_clause": "8",
+      "target_point": "b",
+      "note": "d) Sửa đổi điểm b khoản 8 Điều 23 như sau:"
+    }
+  ],
+  "ND100_2019-D24": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 24,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 24 như sau:"
+    }
+  ],
+  "ND100_2019-D24-K3-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 24,
+      "target_clause": "3",
+      "target_point": "c",
+      "note": "a) Sửa đổi điểm c khoản 3 Điều 24 như sau:"
+    }
+  ],
+  "ND100_2019-D24-K5-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 24,
+      "target_clause": "5",
+      "target_point": "c",
+      "note": "b) Sửa đổi điểm c khoản 5 Điều 24 như sau:"
+    }
+  ],
+  "ND100_2019-D24-K8a": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 24,
+      "target_clause": "8a",
+      "target_point": null,
+      "note": "c) Bổ sung khoản 8a vào sau khoản 8 Điều 24 như sau:"
+    }
+  ],
+  "ND100_2019-D24-K9-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 24,
+      "target_clause": "9",
+      "target_point": "b",
+      "note": "d) Sửa đổi điểm b khoản 9 Điều 24 như sau:"
+    }
+  ],
+  "ND100_2019-D25": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 25,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 25 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 25,
+      "target_clause": null,
+      "target_point": null,
+      "note": "i) Bãi bỏ Điều 25, Điều 26, Điều 27;"
+    }
+  ],
+  "ND100_2019-D28": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K2-Pe": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "2",
+      "target_point": "e",
+      "note": "a) Sửa đổi điểm e khoản 2 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K2-Ph": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "2",
+      "target_point": "h",
+      "note": "b) Bổ sung điểm i vào sau điểm h khoản 2 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "c) Sửa đổi khoản 3 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K4-Pd": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "4",
+      "target_point": "d",
+      "note": "d) Sửa đổi điểm d khoản 4 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K6-Po": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "6",
+      "target_point": "o",
+      "note": "đ) Sửa đổi điểm o khoản 6 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K6-Pp": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "6",
+      "target_point": "p",
+      "note": "e) Sửa đổi điểm p khoản 6 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K8": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "8",
+      "target_point": null,
+      "note": "g) Sửa đổi khoản 8 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K9": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "9",
+      "target_point": null,
+      "note": "h) Sửa đổi khoản 9 Điều 28 như sau:"
+    }
+  ],
+  "ND100_2019-D29": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 29,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 29 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 29,
+      "target_clause": null,
+      "target_point": null,
+      "note": "l) Bãi bỏ Điều 29, Điều 30, Điều 32, Điều 33, Điều 34, Điều 35, Điều 36, Điều 37, Điều 38;"
+    }
+  ],
+  "ND100_2019-D30": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "a) Sửa đổi khoản 3 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K4-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "4",
+      "target_point": "b",
+      "note": "b) Sửa đổi điểm b khoản 4 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K4a": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "4a",
+      "target_point": null,
+      "note": "c) Bổ sung khoản 4a vào sau khoản 4 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K5-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "5",
+      "target_point": "g",
+      "note": "d) Sửa đổi điểm g khoản 5 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K6": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "6",
+      "target_point": null,
+      "note": "đ) Sửa đổi khoản 6 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K7-Pd": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "7",
+      "target_point": "d",
+      "note": "e) Sửa đổi điểm d khoản 7 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K7-Pm": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "7",
+      "target_point": "m",
+      "note": "g) Sửa đổi điểm m khoản 7 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K8-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "8",
+      "target_point": "g",
+      "note": "h) Sửa đổi điểm g khoản 8 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K9-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "9",
+      "target_point": "a",
+      "note": "i) Sửa đổi điểm a khoản 9 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K9-Pđ": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "9",
+      "target_point": "đ",
+      "note": "k) Sửa đổi điểm đ khoản 9 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K9-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "9",
+      "target_point": "g",
+      "note": "l) Sửa đổi điểm e, điểm g khoản 9 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K9-Ph": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "9",
+      "target_point": "h",
+      "note": "m) Bổ sung điểm i vào sau điểm h khoản 9 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K10": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "10",
+      "target_point": null,
+      "note": "n) Sửa đổi khoản 10 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K12": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "12",
+      "target_point": null,
+      "note": "o) Sửa đổi khoản 12 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K13": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "13",
+      "target_point": null,
+      "note": "p) Sửa đổi khoản 13 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K14": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "14",
+      "target_point": null,
+      "note": "q) Sửa đổi khoản 14 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K15": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "15",
+      "target_point": null,
+      "note": "r) Sửa đổi khoản 15 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D30-K16": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 30,
+      "target_clause": "16",
+      "target_point": null,
+      "note": "s) Bổ sung khoản 16 vào sau khoản 15 Điều 30 như sau:"
+    }
+  ],
+  "ND100_2019-D33": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 33,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 33 như sau:"
+    }
+  ],
+  "ND100_2019-D34": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 34,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản Điều 34 như sau:"
+    }
+  ],
+  "ND100_2019-D34-K2": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 34,
+      "target_clause": "2",
+      "target_point": null,
+      "note": "a) Sửa đổi khoản 2 Điều 34 như sau:"
+    }
+  ],
+  "ND100_2019-D34-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 34,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "b) Sửa đổi khoản 3 Điều 34 như sau:"
+    }
+  ],
+  "ND100_2019-D35": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 35,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 35 như sau:"
+    }
+  ],
+  "ND100_2019-D37-K2-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 37,
+      "target_clause": "2",
+      "target_point": "c",
+      "note": "Bổ sung điểm d vào sau điểm c khoản 2 Điều 37 như sau:"
+    }
+  ],
+  "ND100_2019-D38-K1-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 38,
+      "target_clause": "1",
+      "target_point": "b",
+      "note": "Bổ sung điểm c vào sau điểm b khoản 1 Điều 38 như sau:"
+    }
+  ],
+  "ND100_2019-D44-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 44,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "Sửa đổi đoạn mở đầu và điểm a khoản 3 của Điều 44 như sau:"
+    },
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 44,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "a) Sửa đổi đoạn mở đầu khoản 3 Điều 44 như sau:"
+    }
+  ],
+  "ND100_2019-D44-K3-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 44,
+      "target_clause": "3",
+      "target_point": "a",
+      "note": "b) Sửa đổi điểm a khoản 3 Điều 44 như sau:"
+    }
+  ],
+  "ND100_2019-D66": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi tên điều và một số điểm, khoản của Điều 66 như sau:"
+    },
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": null,
+      "target_point": null,
+      "note": "a) Sửa đổi tên Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "b) Sửa đổi đoạn mở đầu khoản 3 Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K3-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "3",
+      "target_point": "c",
+      "note": "c) Sửa đổi điểm c khoản 3 Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K4": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "4",
+      "target_point": null,
+      "note": "d) Sửa đổi khoản 4 Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K5": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "5",
+      "target_point": null,
+      "note": "đ) Sửa đổi đoạn mở đầu khoản 5 Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K5-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "5",
+      "target_point": "a",
+      "note": "e) Sửa đổi điểm a khoản 5 Điều 66 như sau:"
+    }
+  ],
+  "ND100_2019-D67-K1-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 67,
+      "target_clause": "1",
+      "target_point": "a",
+      "note": "Sửa đổi điểm a khoản 1 Điều 67 như sau:"
+    }
+  ],
+  "ND100_2019-D74": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 74 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K2-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "2",
+      "target_point": "g",
+      "note": "a) Sửa đổi điểm e, điểm g khoản 2 Điều 74 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "2",
+      "target_point": "g",
+      "note": "c) Sửa đổi, bổ sung điểm g khoản 2 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K3-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "3",
+      "target_point": "b",
+      "note": "b) Sửa đổi điểm a, điểm b khoản 3 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K3-Ph": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "3",
+      "target_point": "h",
+      "note": "c) Sửa đổi điểm h khoản 3 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K3a": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "3a",
+      "target_point": null,
+      "note": "d) Bổ sung khoản 3a vào sau khoản 3 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K4": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "4",
+      "target_point": null,
+      "note": "đ) Sửa đổi tên khoản 4 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K4-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "4",
+      "target_point": "b",
+      "note": "e) Sửa đổi điểm b khoản 4 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K4-Pe": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "4",
+      "target_point": "e",
+      "note": "g) Sửa đổi điểm e khoản 4 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K5-Pg": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "g",
+      "note": "h) Sửa đổi điểm g khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K5-Pi": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "i",
+      "note": "i) Sửa đổi điểm i khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K5": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": null,
+      "note": "k) Sửa đổi l khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K5-Pn": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "n",
+      "note": "l) Sửa đổi điểm n khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D74-K5-Pp": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "p",
+      "note": "m) Sửa đổi điểm p khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D75": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 75,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 75 như sau:"
+    }
+  ],
+  "ND100_2019-D76": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 76,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 76 như sau:"
+    }
+  ],
+  "ND100_2019-D77": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 77,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi Điều 77 như sau:"
+    }
+  ],
+  "ND100_2019-D80": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 80 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K1": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "1",
+      "target_point": null,
+      "note": "a) Sửa đổi khoản 1 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K2": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "2",
+      "target_point": null,
+      "note": "b) Sửa đổi khoản 2 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "3",
+      "target_point": "a",
+      "note": "c) Sửa đổi điểm a khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pb": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "3",
+      "target_point": "b",
+      "note": "d) Sửa đổi điểm b khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pe": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "3",
+      "target_point": "e",
+      "note": "đ) Sửa đổi điểm d, điểm đ, điểm e khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pk": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "3",
+      "target_point": "k",
+      "note": "e) Sửa đổi điểm k khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K4": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "4",
+      "target_point": null,
+      "note": "g) Sửa đổi khoản 4 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K5-Pc": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "5",
+      "target_point": "c",
+      "note": "h) Sửa đổi điểm c khoản 5 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K5-Pđ": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "5",
+      "target_point": "đ",
+      "note": "i) Bổ sung điểm e vào sau điểm đ khoản 5 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K7": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 80,
+      "target_clause": "7",
+      "target_point": null,
+      "note": "k) Sửa đổi khoản 7 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D66-K6": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 66,
+      "target_clause": "6",
+      "target_point": null,
+      "note": "Khi xử phạt đối với chủ phương tiện quy định tại khoản 6 Điều này, thời hạn ra quyết định xử phạt có thể được kéo dài để xác minh đối tượng bị xử phạt theo quy định tại khoản 1 Điều 66 Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020) nhưng tối đa không quá 02 tháng.\"."
+    }
+  ],
+  "ND100_2019-D81-K2": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 81,
+      "target_clause": "2",
+      "target_point": null,
+      "note": "Sửa đổi khoản 2 Điều 81 như sau:"
+    }
+  ],
+  "ND100_2019-D82": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 82,
+      "target_clause": null,
+      "target_point": null,
+      "note": "Sửa đổi, bổ sung một số điểm, khoản của Điều 82 như sau:"
+    }
+  ],
+  "ND100_2019-D82-K1": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 82,
+      "target_clause": "1",
+      "target_point": null,
+      "note": "a) Sửa đổi khoản 1 Điều 82 như sau:"
+    },
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 82,
+      "target_clause": "1",
+      "target_point": null,
+      "note": "p) Bãi bỏ khoản 1, khoản 3 Điều 82."
+    }
+  ],
+  "ND100_2019-D125-K2": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 125,
+      "target_clause": "2",
+      "target_point": null,
+      "note": "Để ngăn chặn ngay vi phạm hành chính, người có thẩm quyền được phép tạm giữ phương tiện trước khi ra quyết định xử phạt theo quy định tại khoản 2, khoản 8 Điều 125 Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020) đối với những hành vi vi phạm được quy định tại các điều, khoản, điểm sau đây của Nghị định này:"
+    }
+  ],
+  "ND100_2019-D82-K2": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 82,
+      "target_clause": "2",
+      "target_point": null,
+      "note": "b) Sửa đổi khoản 2 Điều 82 như sau:"
+    }
+  ],
+  "ND100_2019-D125-K6": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 125,
+      "target_clause": "6",
+      "target_point": null,
+      "note": "Để bảo đảm thi hành quyết định xử phạt vi phạm hành chính hoặc để xác minh tình tiết làm căn cứ ra quyết định xử phạt, người có thẩm quyền xử phạt còn có thể quyết định tạm giữ phương tiện, giấy tờ có liên quan đến người điều khiển và phương tiện vi phạm một trong các hành vi quy định tại Nghị định này theo quy định tại khoản 6, khoản 8 Điều 125 của Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung năm 2020)."
+    }
+  ],
+  "ND100_2019-D74-K3-Pe": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "3",
+      "target_point": "e",
+      "note": "a) Bổ sung cụm từ \"khoản 4a,\" vào trước cụm từ \"khoản 5\" tại điểm d khoản 2, điểm e khoản 3 Điều 74;"
+    }
+  ],
+  "ND100_2019-D74-K5-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "a",
+      "note": "b) Bổ sung cụm từ \"điểm d khoản 7;\" vào sau cụm từ \"khoản 6\" tại điểm a khoản 5 Điều 74;"
+    }
+  ],
+  "ND100_2019-D74-K3-Pa": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bổ sung",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "3",
+      "target_point": "a",
+      "note": "c) Bổ sung cụm từ \"điểm a\" vào trước cụm từ \"khoản 3\" tại khoản 6 Điều 74;"
+    }
+  ],
+  "ND100_2019-D2-K3": [
+    {
+      "amending_decree_id": "123",
+      "amending_decree_no": null,
+      "amending_issue_date": "2019-12-31",
+      "amending_effective_from": "2019-12-31",
+      "amending_article": 2,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 2,
+      "target_clause": "3",
+      "target_point": null,
+      "note": "bãi bỏ cụm từ \", tổ hợp tác\" tại khoản 3 Điều 2;"
+    }
+  ],
   "ND100_2019-D1-K2a": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "bổ sung",
@@ -232,14 +1960,30 @@
       "target_article": 1,
       "target_clause": "2a",
       "target_point": null,
-      "note": "bổ sung khoản 2a vào sau khoản 2 Điều 1 như sau:"
+      "note": "Bổ sung khoản 2a vào sau khoản 2 Điều 1 như sau:"
+    }
+  ],
+  "ND100_2019-D28-K6-Pc": [
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 28,
+      "target_clause": "6",
+      "target_point": "c",
+      "note": "Sửa đổi, bổ sung một số điểm của khoản 6 Điều 28 như sau:"
     }
   ],
   "ND100_2019-D28-K6-Pd": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
@@ -248,46 +1992,46 @@
       "target_article": 28,
       "target_clause": "6",
       "target_point": "d",
-      "note": "Sửa đổi, bổ sung một số điểm của khoản 6 Điều 28 như sau:, a) Sửa đổi, bổ sung điểm d khoản 6 Điều 28 như sau:"
+      "note": "a) Sửa đổi, bổ sung điểm d khoản 6 Điều 28 như sau:"
     }
   ],
-  "ND100_2019-D2-K6-Pi": [
+  "ND100_2019-D28-K6-Pi": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
-      "target_article": 2,
+      "target_article": 28,
       "target_clause": "6",
       "target_point": "i",
-      "note": "b) Sửa đổi, bổ sung điểm i khoản 6 Điều 2Š như sau:"
+      "note": "b) Sửa đổi, bổ sung điểm i khoản 6 Điều 28 như sau:"
     }
   ],
   "ND100_2019-D28-K10-Pb": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
-      "action": "bổ sung",
+      "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
       "target_article": 28,
       "target_clause": "10",
       "target_point": "b",
-      "note": "Sửa đối, bổ sung điểm a, điểm b khoản 10 Điều 28 như sau:"
+      "note": "Sửa đổi, bổ sung điểm a, điểm b khoản 10 Điều 28 như sau:"
     }
   ],
   "ND100_2019-D28-K11-Ph": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
@@ -296,58 +2040,14 @@
       "target_article": 28,
       "target_clause": "11",
       "target_point": "h",
-      "note": "Sửa đổi, bổ sung điểm h khoản 11 Điều 28 như sau:."
-    }
-  ],
-  "ND100_2019-D74": [
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "bổ sung",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 74,
-      "target_clause": null,
-      "target_point": null,
-      "note": "Sửa déi, bổ sung một số điểm, khoản của Điều 74 như sau:"
-    },
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "sửa đổi",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 74,
-      "target_clause": null,
-      "target_point": null,
-      "note": "d) Sửa đổi, bố sung điểm m \"oan 5 Điều 74 như sau:"
-    },
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "sửa đổi",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 74,
-      "target_clause": null,
-      "target_point": null,
-      "note": "đ) Sửa đổi, bổ sung điểm o kibản 5 Điều 74 như sau:"
+      "note": "Sửa đổi, bổ sung điểm h khoản 11 Điều 28 như sau:"
     }
   ],
   "ND100_2019-D74-K2-Pb": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
@@ -362,8 +2062,8 @@
   "ND100_2019-D74-K2-Pe": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
@@ -375,85 +2075,139 @@
       "note": "b) Sửa đổi, bổ sung điểm e khoản 2 Điều 74 như sau:"
     }
   ],
-  "ND100_2019-D74-K2-Pg": [
+  "ND100_2019-D74-K5-Pm": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
       "target_article": 74,
-      "target_clause": "2",
-      "target_point": "g",
-      "note": "c) Sửa đổi, bổ sung điểm g khoản 2 Điều 74 như sau:"
+      "target_clause": "5",
+      "target_point": "m",
+      "note": "d) Sửa đổi, bổ sung điểm m khoản 5 Điều 74 như sau:"
     }
   ],
-  "ND100_2019-D80": [
+  "ND100_2019-D74-K5-Po": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "sửa đổi",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 74,
+      "target_clause": "5",
+      "target_point": "o",
+      "note": "đ) Sửa đổi, bổ sung điểm o khoản 5 Điều 74 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pi": [
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
       "target_article": 80,
-      "target_clause": null,
-      "target_point": null,
-      "note": "Sửa đổi, bổ sung một sé điểm, khoản của Điều 80 như sau:"
-    },
+      "target_clause": "3",
+      "target_point": "i",
+      "note": "a) Sửa đổi, bổ sung điểm i khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K3-Pl": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
       "target_article": 80,
-      "target_clause": null,
-      "target_point": null,
-      "note": "a) Sửa đổi, bổ sung điểm i khăn 3 Điều 80 như sau:"
-    },
+      "target_clause": "3",
+      "target_point": "l",
+      "note": "b) Sửa đổi, bổ sung điểm l khoản 3 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D80-K5": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
       "target_article": 80,
-      "target_clause": null,
+      "target_clause": "5",
       "target_point": null,
-      "note": "b) Sửa đổi, bổ sung điểm | nh 3 Điều 80 như sau:"
-    },
+      "note": "c) Sửa đổi, bổ sung đoạn đầu khoản 5 Điều 80 như sau:"
+    }
+  ],
+  "ND100_2019-D82-K4": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "sửa đổi",
       "target_decree_id": "100",
       "target_decree_base": "ND100_2019",
-      "target_article": 80,
-      "target_clause": null,
+      "target_article": 82,
+      "target_clause": "4",
       "target_point": null,
-      "note": "c) Sửa đổi, bổ sung đoạn soi 5 Điều 80 như sau:"
+      "note": "Sửa đổi, bổ sung khoản 4 Điều 82 như sau:"
+    }
+  ],
+  "ND100_2019-D3-K1": [
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 3,
+      "target_clause": "1",
+      "target_point": null,
+      "note": "a) Bãi bỏ khoản 1 Điều 3;"
+    }
+  ],
+  "ND100_2019-D4-K2-Py": [
+    {
+      "amending_decree_id": "168",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
+      "amending_effective_from": "2025-01-01",
+      "amending_article": 52,
+      "action": "bãi bỏ",
+      "target_decree_id": "100",
+      "target_decree_base": "ND100_2019",
+      "target_article": 4,
+      "target_clause": "2",
+      "target_point": "y",
+      "note": "b) Bãi bỏ điểm b, điểm e, điểm g, điểm k, điểm l, điểm m, điểm q, điểm r, điểm t, điểm u, điểm v, điểm x, điểm y khoản 2 Điều 4;"
     }
   ],
   "ND100_2019-D4-K1-Pa": [
     {
       "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
+      "amending_decree_no": null,
+      "amending_issue_date": null,
       "amending_effective_from": "2025-01-01",
       "amending_article": 52,
       "action": "bãi bỏ",
@@ -463,54 +2217,6 @@
       "target_clause": "1",
       "target_point": "a",
       "note": "c) Bãi bỏ điểm a khoản 1 Điều 4a;"
-    }
-  ],
-  "ND100_2019-D25": [
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "bãi bỏ",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 25,
-      "target_clause": null,
-      "target_point": null,
-      "note": "i) Bãi bỏ Điều 25, Điều 26, Điều 27;:"
-    }
-  ],
-  "ND100_2019-D29": [
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "bãi bỏ",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 29,
-      "target_clause": null,
-      "target_point": null,
-      "note": "1) Bãi bỏ Điều 29, Điều 30, Điều 32, Điều 33, Điều 34, Điều 35, Điều 36, Điều 37, Điều 38;"
-    }
-  ],
-  "ND100_2019-D82-K1": [
-    {
-      "amending_decree_id": "168",
-      "amending_decree_no": "168/2024/NĐ-CP",
-      "amending_issue_date": "2024-12-26",
-      "amending_effective_from": "2025-01-01",
-      "amending_article": 52,
-      "action": "bãi bỏ",
-      "target_decree_id": "100",
-      "target_decree_base": "ND100_2019",
-      "target_article": 82,
-      "target_clause": "1",
-      "target_point": null,
-      "note": "p) Bãi bỏ khoản 1, khoản 3 điều 82."
     }
   ]
 }
