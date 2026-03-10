@@ -14,7 +14,7 @@ files = {
 }
 
 start_pattern = re.compile(
-    r"^(Chương|Mục|Điều\s+\d+[a-zđ]?\.|\d+\.\s|[a-zđ]\)|“|\d+[a-zđ])"
+    r"^(Chương|Mục|Điều\s+\d+[a-zđ]?\.|\d+\.\s|[a-zđ]\)|\d+[a-zđ]|“Mục|“Điều|“\d+\.|“[a-zđ]\)|“\d+[a-zđ].)"
 )
 
 congbao_pattern = re.compile(r"CÔNG\s*BÁO")
