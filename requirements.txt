@@ -5,3 +5,11 @@ numpy
 sentence-transformers
 faiss-cpu
 networkx
+opensearch-py
+sqlalchemy
+python-dotenv
+httpx
+langchain-ollama
+fastapi
+uvicorn[standard]
+jinja2

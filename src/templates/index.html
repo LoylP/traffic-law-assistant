@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traffic Law Assistant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      background: #f5f5f5;
+    }
+    h1 { margin-top: 0; color: #1a1a1a; }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    label { display: block; margin-bottom: 0.25rem; font-weight: 500; color: #333; }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    .row { margin-bottom: 1rem; }
+    button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    #answer {
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+    .error { color: #b91c1c; margin-top: 0.5rem; }
+    .meta { font-size: 0.875rem; color: #666; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Traffic Law Assistant</h1>
+  <div class="card">
+    <form id="form">
+      <div class="row">
+        <label for="query">Câu hỏi</label>
+        <input type="text" id="query" name="query" placeholder="VD: xe máy vượt đèn đỏ bị phạt thế nào?" required />
+      </div>
+      <div class="row">
+        <label for="top_k">Số kết quả tra cứu (top_k)</label>
+        <input type="number" id="top_k" name="top_k" value="3" min="1" max="20" />
+      </div>
+      <div class="row">
+        <label for="history">Lịch sử hội thoại (tùy chọn)</label>
+        <textarea id="history" name="conversation_history" placeholder="Nội dung hội thoại trước (nếu có)"></textarea>
+      </div>
+      <button type="submit" id="submit">Gửi</button>
+    </form>
+  </div>
+  <div class="card" id="resultCard" style="display: none;">
+    <strong>Kết quả</strong>
+    <div id="answer" class="meta"></div>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("form");
+    const resultCard = document.getElementById("resultCard");
+    const answerEl = document.getElementById("answer");
+    const errorEl = document.getElementById("error");
+    const submitBtn = document.getElementById("submit");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      errorEl.textContent = "";
+      answerEl.textContent = "Đang xử lý...";
+      resultCard.style.display = "block";
+      submitBtn.disabled = true;
+
+      const query = document.getElementById("query").value.trim();
+      const top_k = parseInt(document.getElementById("top_k").value, 10) || 3;
+      const conversation_history = document.getElementById("history").value.trim();
+
+      try {
+        const res = await fetch("/api/answer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query, top_k, conversation_history }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.detail || res.statusText);
+        }
+        answerEl.textContent = data.answer;
+        answerEl.classList.remove("meta");
+      } catch (err) {
+        errorEl.textContent = err.message || "Có lỗi xảy ra.";
+        answerEl.textContent = "";
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
