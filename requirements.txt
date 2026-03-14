@@ -10,3 +10,7 @@ re
 sentence-transformers
 faiss-cpu
 networkx
+python-dotenv
+google-genai 
+rank-bm25
+underthesea
