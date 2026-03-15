@@ -124,11 +124,11 @@ export function ChatbotShell() {
                   Trợ lý pháp lý giao thông
                 </p>
                 <h2 className="mt-3 text-2xl font-semibold text-slate-900 sm:text-3xl">
-                  Hỏi nhanh, hiểu rõ mức phạt và quy định
+                  Hệ thống hỏi đáp Luật Giao thông
                 </h2>
                 <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-slate-600">
                   <BadgeCheck size={14} className="text-emerald-600" />
-                  Tư vấn bằng tiếng Việt, ngắn gọn, dễ áp dụng khi lái xe.
+                  Hỏi nhanh, hiểu rõ mức phạt và quy định.
                 </p>
             </div>
 
