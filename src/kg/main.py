@@ -21,20 +21,11 @@ def display_result(result, rank, amendment_map):
     node = result['raw_node']
     
     print(f"\n【 KẾT QUẢ #{rank} - Độ tương đồng cao 】")
-    print(f"🔹 Hành vi: {node.get('description_natural', 'N/A')}")
-    print(f"💰 Mức phạt: {node.get('fine_min', 'Không rõ')} - {node.get('fine_max', 'N/A')}")
-    print(f"🛵 Phương tiện: {node.get('vehicle_type', 'N/A')}")
+    print(f"Hành vi: {node.get('description_natural', 'N/A')}")
+    print(f"Mức phạt: {node.get('fine_min', 'Không rõ')} - {node.get('fine_max', 'N/A')}")
+    print(f"Phương tiện: {node.get('vehicle_type', 'N/A')}")
     print(f"Trích dẫn: {node.get('legal_basis', 'N/A')}")
-
-    # Gợi ý thêm các thông tin từ KG
-    if node.get('article'):
-        print(f"📖 Căn cứ pháp lý: Điều {node.get('article')}, Khoản {node.get('clause', '')}")
-    
-    if node.get('additional_penalty'):
-        print(f"⚠️ Hình phạt bổ sung: {node.get('additional_penalty')}")
-        
-    if node.get('context_condition'):
-        print(f"📍 Ngữ cảnh: {node.get('context_condition')}")
+    print(f"Hình phạt bổ sung: {node.get('additional_sanctions', 'N/A')}")
 
     # Thêm thông tin về sửa đổi luật
     citation_id = node.get('citation_id')

@@ -18,7 +18,7 @@ KG_DIR = DATA_DIR / "kg"
 KG_DIR.mkdir(parents=True, exist_ok=True)
 
 LAW_CORPUS_FILE = STRUCTURED_DIR / "law_corpus.jsonl"
-VIOLATIONS_FILE = STRUCTURED_DIR / "violations_300.json"
+VIOLATIONS_FILE = STRUCTURED_DIR / "violations_300_update.json"
 
 OUT_NODES = KG_DIR / "kg_nodes.jsonl"
 OUT_EDGES = KG_DIR / "kg_edges.jsonl"
