@@ -14,10 +14,16 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
     return <p className="text-slate-500">Không có kết quả.</p>;
   }
 
+  const renderText = (value: unknown, fallback = "-") => {
+    if (typeof value === "string") return value;
+    if (typeof value === "number") return value.toString();
+    return fallback;
+  };
+
   return (
     <div className="space-y-4">
       {results.map((result, index) => {
-        const node = result.raw_node;
+        const node = result.raw_node as Record<string, unknown>;
 
         const score =
           typeof result.score === "number"
@@ -26,6 +32,8 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
             ? result.scores.hybrid
             : typeof result.scores?.embedding === "number"
             ? result.scores.embedding
+            : typeof result.scores?.bm25 === "number"
+            ? result.scores.bm25
             : undefined;
 
         return (
@@ -45,33 +53,33 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
             <div className="space-y-2 text-sm text-slate-700">
               <p>
                 <span className="font-semibold">ID:</span>{" "}
-                {node.violation_id || result.violation_id || "-"}
+                {renderText(node.violation_id ?? result.violation_id)}
               </p>
 
               <p>
                 <span className="font-semibold">Hành vi:</span>{" "}
-                {node.normalized_violation || "-"}
+                {renderText(node.normalized_violation)}
               </p>
 
               <p>
                 <span className="font-semibold">Phương tiện:</span>{" "}
-                {node.vehicle_type || "-"}
+                {renderText(node.vehicle_type)}
               </p>
 
               <p>
                 <span className="font-semibold">Mức phạt:</span>{" "}
-                {formatCurrency(node.fine_min)} - {formatCurrency(node.fine_max)}
+                {formatCurrency(node.fine_min as number)} - {formatCurrency(node.fine_max as number)}
               </p>
 
               <p>
                 <span className="font-semibold">Trích dẫn:</span>{" "}
-                {node.legal_basis || "-"}
+                {renderText(node.legal_basis)}
               </p>
 
               <p>
                 <span className="font-semibold">Hình thức bổ sung:</span>{" "}
-                {node.additional_sanctions?.trim()
-                  ? node.additional_sanctions
+                {renderText(node.additional_sanctions)?.trim()
+                  ? renderText(node.additional_sanctions)
                   : "Không có"}
               </p>
             </div>

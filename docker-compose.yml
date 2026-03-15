@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/api/Dockerfile
+    container_name: traffic-law-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./requirements.txt:/app/requirements.txt
+      - ./.env:/app/.env
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: src/web/Dockerfile
+    container_name: traffic-law-web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/web:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    restart: unless-stopped
