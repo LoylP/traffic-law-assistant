@@ -1,13 +1,42 @@
 import { Bot, Clock3, UserRound } from "lucide-react";
 
 import { Message } from "@/types/chat";
+import { SearchResult } from "@/lib/chat-api";
+import { ResultsDisplay } from "./ResultsDisplay";
 
 type MessageBubbleProps = {
   message: Message;
 };
 
+function parseResults(content: string): SearchResult[] | null {
+  try {
+    const parsed: unknown = JSON.parse(content);
+    if (!Array.isArray(parsed) || parsed.length === 0) return null;
+
+    const first = parsed[0];
+    if (
+      typeof first === "object" &&
+      first !== null &&
+      "raw_node" in first
+    ) {
+      return parsed as SearchResult[];
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export function MessageBubble({ message }: MessageBubbleProps) {
   const isUser = message.role === "user";
+  const parsedResults = parseResults(message.content);
+
+  const content = parsedResults ? (
+    <ResultsDisplay results={parsedResults} />
+  ) : (
+    <p>{message.content}</p>
+  );
 
   return (
     <div className={`animate-message-in flex ${isUser ? "justify-end" : "justify-start"}`}>
@@ -26,7 +55,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
             : "rounded-bl-md border border-slate-300 bg-white text-slate-800"
         }`}
         >
-          <p>{message.content}</p>
+          {content}
           <p
             className={`mt-2 inline-flex items-center gap-1 text-[11px] ${
               isUser ? "text-slate-300" : "text-slate-500"

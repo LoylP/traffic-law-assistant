@@ -36,8 +36,8 @@ class LegalRetriever:
             for line in f:
                 node = json.loads(line)
                 if node.get("type") == "Violation":
-                    # Kết hợp các trường để tăng độ chính xác khi tìm kiếm
-                    text_search = f"{node.get('description_natural', '')} {node.get('normalized_violation', '')}"
+                    # Tập trung vào description_natural và vehicle_type
+                    text_search = f"{node.get('vehicle_type', '')} {node.get('description_natural', '')}"
                     violation_rows.append({
                         "violation_id": str(node.get("violation_id")),
                         "text": text_search,
@@ -63,20 +63,50 @@ class LegalRetriever:
             
         return bm25, doc_embeddings
 
-    def search(self, query, top_k=5, alpha=0.5):
+    def search(self, query, top_k=5, alpha=0.5, vehicle_type=None):
         # BM25 Scoring
         tk_query = self._tokenize_bm25(query)
-        bm25_scores = self.bm25.get_scores(tk_query)
+        bm25_scores_all = self.bm25.get_scores(tk_query)
         
         # Vector Scoring
         q_emb = self.model.encode([f"query: {query}"], normalize_embeddings=True)[0]
-        emb_scores = np.dot(self.doc_embeddings, q_emb)
+        emb_scores_all = np.dot(self.doc_embeddings, q_emb)
+
+        # Filter by vehicle_type if provided
+        if vehicle_type:
+            indices = [i for i, row in self.df_corpus.iterrows() 
+                      if row['raw_node'].get('vehicle_type', '').lower() == vehicle_type.lower()]
+        else:
+            indices = list(range(len(self.df_corpus)))
+        
+        bm25_scores = bm25_scores_all[indices]
+        emb_scores = emb_scores_all[indices]
 
         # Hybrid Combination
         bm25_n = minmax_scale(bm25_scores) if np.ptp(bm25_scores) > 0 else np.zeros_like(bm25_scores)
         emb_n = minmax_scale(emb_scores) if np.ptp(emb_scores) > 0 else np.zeros_like(emb_scores)
         
         final_scores = alpha * bm25_n + (1 - alpha) * emb_n
+        
         top_idx = np.argsort(final_scores)[::-1][:top_k]
         
-        return self.df_corpus.iloc[top_idx].to_dict('records')
+        results = []
+
+        for idx in top_idx:
+            global_idx = indices[idx]
+            row = self.df_corpus.iloc[global_idx]
+
+            results.append({
+                "violation_id": row["violation_id"],
+                "text": row["text"],
+                "raw_node": row["raw_node"],
+
+                # scores
+                "scores": {
+                    "bm25": float(bm25_scores_all[global_idx]),
+                    "embedding": float(emb_scores_all[global_idx]),
+                    "hybrid": float(final_scores[idx])
+                }
+            })
+
+        return results

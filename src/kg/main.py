@@ -60,27 +60,52 @@ def main():
             normalized_amendment_map = {}
             print("⚠️ Không tìm thấy file amendment_map.json")
         
-        print("\n✅ Hệ thống sẵn sàng! (Nhập 'exit' để thoát)")
+        print("\n✅ Hệ thống sẵn sàng!")
         
-        while True:
-            query = input("\n👤 Câu hỏi của bạn: ").strip()
-            if query.lower() in ['exit', 'quit', 'thoát']:
-                break
-            if not query:
-                continue
+        query = "Xe máy vượt đèn đỏ thì bị hành vi gì"  
+        if not query:
+            print("Query rỗng, thoát.")
+            return
 
-            print("🔍 Đang phân tích câu hỏi bằng Gemini...")
-            refined_query = llm_engine.rewrite(query)
-            print(f"✨ Từ khóa tìm kiếm: {refined_query}")
+        print("🔍 Đang phân tích câu hỏi bằng Gemini...")
+        refined_data = llm_engine.rewrite(query)
+        refined_query = refined_data.get("rewritten_query", query)
+        vehicle_type = refined_data.get("vehicle_type")
+        expand_queries = refined_data.get("expand_query", [refined_query])
+        print(f"✨ Từ khóa tìm kiếm: {refined_query}")
+        if vehicle_type:
+            print(f"🚗 Phương tiện ưu tiên: {vehicle_type}")
+        print(f"🔍 Các truy vấn mở rộng: {expand_queries}")
 
-            print("🔎 Đang truy vấn Knowledge Graph...")
-            results = retriever.search(refined_query, top_k=1)
+        print("🔎 Đang truy vấn Knowledge Graph...")
+        results = []
+        for eq in expand_queries:
+            res = retriever.search(eq, top_k=10, vehicle_type=vehicle_type)
+            results.extend(res)
+        
+        # Remove duplicates and keep best score
+        unique_results = {}
+        for res in results:
+            vid = res['violation_id']
+            if vid not in unique_results or res['scores']['hybrid'] > unique_results[vid]['scores']['hybrid']:
+                unique_results[vid] = res
+        
+        results = list(unique_results.values())
+        results.sort(key=lambda x: x['scores']['hybrid'], reverse=True)
+        results = results[:10]
 
-            if not results:
-                print("❌ Không tìm thấy vi phạm nào phù hợp với câu hỏi của bạn.")
+        if not results:
+            print("❌ Không tìm thấy vi phạm nào phù hợp với câu hỏi của bạn.")
+        else:
+            for i, res in enumerate(results, 1):
+                display_result(res, i, normalized_amendment_map)
+            
+            print("\n🤖 Đang chọn kết quả tốt nhất bằng LLM...")
+            best_result = llm_engine.select_best_result(query, results)
+            if best_result:
+                display_result(best_result, "TỐT NHẤT", normalized_amendment_map)
             else:
-                for i, res in enumerate(results, 1):
-                    display_result(res, i, normalized_amendment_map)
+                print("Không tìm thấy kết quả phù hợp.")
                     
     except Exception as e:
         print(f"💥 Lỗi khởi động: {e}")

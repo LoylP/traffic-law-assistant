@@ -1,16 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { BadgeCheck, Sparkles } from "lucide-react";
 
 import { sendMessage as sendMessageApi } from "@/lib/chat-api";
-import { DEFAULT_MODEL, MODEL_STORAGE_KEY } from "@/lib/models";
 import { Message } from "@/types/chat";
 
 import { ChatHeader } from "./ChatHeader";
 import { ChatInput } from "./ChatInput";
 import { MessageList } from "./MessageList";
-import { ModelSettings } from "./ModelSettings";
 
 function formatTime(iso: string): string {
   const date = new Date(iso);
@@ -20,22 +18,26 @@ function formatTime(iso: string): string {
   });
 }
 
+function generateId(prefix = 'id') {
+  const browserCrypto = typeof crypto !== 'undefined' ? crypto : undefined;
+  const randomUUID = (browserCrypto as unknown as { randomUUID?: () => string })?.randomUUID;
+
+  if (typeof randomUUID === 'function') {
+    return `${prefix}_${randomUUID()}`;
+  }
+
+  // Fallback for environments where crypto.randomUUID is unavailable
+  return `${prefix}_${Math.random().toString(16).slice(2)}_${Date.now()}`;
+}
+
 export function ChatbotShell() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [selectedModel, setSelectedModel] = useState(DEFAULT_MODEL);
+  const [searchMode, setSearchMode] = useState<'retrieval' | 'llm'>('retrieval');
+  const [topK, setTopK] = useState(3);
+  const [alpha, setAlpha] = useState(0.5);
   const hasConversation = messages.length > 0 || isTyping;
 
-  useEffect(() => {
-    const cached = window.localStorage.getItem(MODEL_STORAGE_KEY);
-    if (cached && cached.trim()) {
-      setSelectedModel(cached.trim());
-    }
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem(MODEL_STORAGE_KEY, selectedModel);
-  }, [selectedModel]);
 
   const refreshConversation = useCallback(() => {
     setMessages([]);
@@ -44,7 +46,7 @@ export function ChatbotShell() {
 
   const sendMessage = useCallback((content: string) => {
     const optimisticUserMessage: Message = {
-      id: `tmp_${crypto.randomUUID()}`,
+      id: generateId('tmp'),
       role: "user",
       content,
       timestamp: formatTime(new Date().toISOString()),
@@ -55,32 +57,42 @@ export function ChatbotShell() {
 
     void (async () => {
       try {
-        const response = await sendMessageApi(content, selectedModel);
+        const response = await sendMessageApi(content, searchMode, topK, alpha);
         const assistantMessage: Message = {
-          id: `assistant_${crypto.randomUUID()}`,
+          id: generateId('assistant'),
           role: "assistant",
-          content: response.content,
+          content: JSON.stringify(
+            response.api_type === "llm" && response.best_result
+              ? [response.best_result]
+              : response.results,
+            null,
+            2
+          ),
           timestamp: formatTime(new Date().toISOString()),
         };
 
         setMessages((current) => [...current, assistantMessage]);
       } catch (error) {
-        console.error(error);
-        window.alert("Không thể gửi tin nhắn. Vui lòng thử lại.");
+        console.error("Send message failed", error);
+        const message = error instanceof Error ? error.message : String(error);
+        window.alert(`Không thể gửi tin nhắn: ${message}`);
       } finally {
         setIsTyping(false);
       }
     })();
-  }, [selectedModel]);
+  }, [searchMode, topK, alpha]);
 
   return (
     <div className="flex h-screen w-full flex-col">
       <ChatHeader
         title="Trợ lý giao thông"
         onRefresh={refreshConversation}
-        expanded={hasConversation}
-        selectedModel={selectedModel}
-        onSelectModel={setSelectedModel}
+        searchMode={searchMode}
+        onSelectMode={setSearchMode}
+        topK={topK}
+        onTopKChange={setTopK}
+        alpha={alpha}
+        onAlphaChange={setAlpha}
       />
 
       <section className="relative flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-slate-50">
@@ -99,13 +111,7 @@ export function ChatbotShell() {
             <MessageList messages={messages} isTyping={isTyping} />
           </div>
 
-          <div
-            className={`mx-auto w-full transition-[transform] duration-500 ease-out will-change-transform ${
-              hasConversation
-                ? "animate-composer-dock max-w-4xl translate-y-0"
-                : "max-w-2xl -translate-y-[28vh] sm:-translate-y-[24vh]"
-            }`}
-          >
+          <div className="mx-auto w-full max-w-4xl">
             <div
               className={`overflow-hidden px-2 text-center transition-[max-height,margin,opacity,transform] duration-500 ease-out ${
                 hasConversation
@@ -132,18 +138,15 @@ export function ChatbotShell() {
               }`}
             >
               <ChatInput
-                onSend={sendMessage}
-                accessory={
-                  !hasConversation ? (
-                    <ModelSettings
-                      selectedModel={selectedModel}
-                      onSelectModel={setSelectedModel}
-                      variant="icon"
-                      placement="top-end"
-                    />
-                  ) : undefined
-                }
-              />
+              onSend={sendMessage}
+              accessory={
+                !hasConversation ? (
+                  <span className="inline-flex items-center gap-1 rounded-lg bg-slate-100 px-3 py-2 text-xs font-medium text-slate-600">
+                    {searchMode === 'retrieval' ? 'Retrieval' : 'LLM'}
+                  </span>
+                ) : undefined
+              }
+            />
             </div>
           </div>
         </div>
